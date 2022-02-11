@@ -1,0 +1,42 @@
+@use "sass" as *;
+
+header {
+  padding-inline: 5em;
+  padding-block: 2.5em;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav {
+  @include flex-align-center;
+}
+
+form {
+  margin-inline: auto;
+}
+
+.nav__item:last-child {
+  @include flex-align-center;
+  gap: 3em;
+}
+
+.nav__item:nth-child(3) {
+  position: relative;
+}
+
+.number__cartItem {
+  position: absolute;
+  background-color: $primary-green;
+  font-family: inherit;
+  color: #fff;
+  font-size: 1.45em;
+  font-weight: 600;
+  top: -0.35em;
+  right: -0.55em;
+  padding: 0.25em 0.55em;
+  border-radius: 50%;
+  vertical-align: middle;
+}

@@ -1,0 +1,28 @@
+@use "sass" as *;
+
+.search {
+  border: 1px solid #dddddd;
+  width: 50em;
+  @include flex-align-stretch;
+
+  &__input {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.75em 1em;
+    flex-grow: 2;
+
+    //placeholder
+    &::placeholder {
+      font-size: 1.15em;
+    }
+  }
+
+  &__button {
+    background-color: lighten(#dddddd, 5%);
+    outline: none;
+    border: 0;
+    padding: 0.5em;
+    @include flex-align-center;
+  }
+}

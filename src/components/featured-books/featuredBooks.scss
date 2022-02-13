@@ -1,8 +1,6 @@
 @use "sass" as *;
 
 .featuredBooks {
-  //   border: 1px solid blue;//
-
   margin-top: 2.5em;
   overflow: hidden;
   position: relative;
@@ -89,40 +87,10 @@
 //flex-container
 
 .featuredBook__item:last-child {
-  @include flex-align-center;
   margin-top: 3em;
-
-  .purchase,
-  .likes,
-  .ratingInfo {
-    @include flex-column--g(0.35em);
-    align-items: center;
-  }
-
-  .feedback {
-    display: flex;
-    align-items: stretch;
-    border-right: 1px solid rgb(84, 84, 84);
-    padding-right: 1em;
-  }
-
-  .likes {
-    margin-left: 0.5em;
-  }
-
-  .ratingInfo {
-    padding-left: 1em;
-
-    & > span:first-of-type {
-      display: flex;
-      gap: 0.35em;
-    }
-  }
 }
 
 .bookTitle {
-  font-size: calc($primary-font-size + 3px);
-  font-weight: 600;
   margin-bottom: 0.35em;
 }
 
@@ -131,15 +99,7 @@
 .bookTag__category,
 .author,
 .publishedYear {
-  font-size: calc($primary-font-size - 4px);
   margin-top: 0.15em;
-  font-weight: 100;
-}
-
-.bookGenre,
-.bookTag,
-.rating > span:first-of-type {
-  font-weight: 500;
 }
 
 //caret

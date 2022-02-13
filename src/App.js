@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Home, Error, Book } from "pages";
+import { Home, Error, BookDetails } from "pages";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/books/:id" element={<Book />} />
+        <Route path="/books/:id" element={<BookDetails />} />
 
         <Route path="*" element={<Error />} />
       </Routes>

@@ -3,7 +3,6 @@ import "./header.scss";
 import brandFullLogo from "assets/svgs/brand-full.svg";
 
 import brandLiteIcon from "assets/svgs/brand-icon.svg";
-import cartIcon from "assets/svgs/cart.svg";
 
 import { Link } from "react-router-dom";
 import { SearchInput } from "components";

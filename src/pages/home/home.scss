@@ -3,14 +3,17 @@
   max-width: 85vw;
   width: 90%;
   margin-inline: auto;
-  min-height: 100vh;
+
   //enables header be pertined insidd
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .main__container {
   max-width: 94.33%;
   margin-inline: auto;
   position: relative;
-  top: 10.3333em;
+  padding-top: 10em;
+  padding-bottom: 5em;
 }

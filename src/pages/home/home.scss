@@ -3,8 +3,14 @@
   max-width: 85vw;
   width: 90%;
   margin-inline: auto;
-  height: 100%;
-  height: 100vh;
-  //enables heder be pertined insidd
+  min-height: 100vh;
+  //enables header be pertined insidd
   position: relative;
+}
+
+.main__container {
+  max-width: 94.33%;
+  margin-inline: auto;
+  position: relative;
+  top: 10.3333em;
 }

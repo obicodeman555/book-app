@@ -1,0 +1,12 @@
+.stars > svg path {
+  fill: yellow;
+}
+
+.stars {
+  display: flex;
+  gap: 0.35em;
+
+  & > svg {
+    margin-top: 0.5em;
+  }
+}

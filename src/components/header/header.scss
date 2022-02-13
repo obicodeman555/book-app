@@ -1,4 +1,6 @@
-@use "sass" as *;
+@use "sass" as color;
+@use "sass" as variable;
+@use "sass" as mixin;
 
 header {
   padding-inline: 5em;
@@ -8,10 +10,13 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  //overlayed ontop every element on the home page
+  z-index: 999999;
+  background-color: color.$primary-white;
 }
 
 nav {
-  @include flex-align-center;
+  @include mixin.flex-align-center;
 }
 
 form {
@@ -19,7 +24,7 @@ form {
 }
 
 .nav__item:last-child {
-  @include flex-align-center;
+  @include mixin.flex-align-center;
   gap: 3em;
 }
 
@@ -27,16 +32,21 @@ form {
   position: relative;
 }
 
-.number__cartItem {
-  position: absolute;
-  background-color: $primary-green;
-  font-family: inherit;
-  color: #fff;
-  font-size: 1.45em;
-  font-weight: 600;
-  top: -0.35em;
-  right: -0.55em;
-  padding: 0.25em 0.55em;
-  border-radius: 50%;
-  vertical-align: middle;
+.cartItem {
+  position: relative;
+  @include mixin.flex-align-center;
+
+  &__number {
+    position: absolute;
+    background-color: color.$primary-green;
+    font-family: inherit;
+    color: color.$primary-white;
+    font-size: variable.$primary-font-size;
+    font-weight: 600;
+    top: -0.65em;
+    left: 1em;
+    padding: 0.25em 0.55em;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
 }

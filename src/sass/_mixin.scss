@@ -6,3 +6,20 @@
   display: flex;
   align-items: stretch;
 }
+
+@mixin flex-align-justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column--g($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

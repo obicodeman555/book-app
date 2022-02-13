@@ -1,12 +1,15 @@
 import "./home.scss";
 import React from "react";
-import { Header } from "components";
+import { Header, FeaturedBooks } from "components";
 
 const Home = () => {
   return (
-    <main className="home">
+    <div className="home">
       <Header />
-    </main>
+      <main className="main__container">
+        <FeaturedBooks />
+      </main>
+    </div>
   );
 };
 

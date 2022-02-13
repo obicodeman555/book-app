@@ -1,7 +1,8 @@
 import React from "react";
+import "./book.scss";
 
 const Book = () => {
-  return <div>Book</div>;
+  return <div className="book">Book</div>;
 };
 
 export default Book;

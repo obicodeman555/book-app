@@ -53,6 +53,9 @@
   }
 }
 
-.book__stock__availability.isAvailable {
+.book__stock__availability.available {
   color: color.$variant-primary-green;
+}
+.book__stock__availability.unavailable {
+  color: color.$primary-red;
 }

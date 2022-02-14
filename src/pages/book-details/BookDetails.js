@@ -11,7 +11,6 @@ import bigMagicCover from "assets/img/big-magic-cover_euc3rh.jpg";
 
 const BookDetails = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  // const homeElement = useRef();
 
   const showCartHandler = () => {
     setIsCartOpen(!isCartOpen);

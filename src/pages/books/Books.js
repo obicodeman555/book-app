@@ -11,6 +11,8 @@ const Books = () => {
         <Book />
         <Book />
         <Book />
+        <Book />
+        <Book />
       </section>
     </>
   );

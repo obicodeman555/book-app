@@ -1,29 +1,20 @@
 import React from "react";
-import "./header.scss";
-import brandFullLogo from "assets/svgs/brand-full.svg";
+import CartItem from "./CartItem";
+import { GoBackLink, LargeCartButton } from "components";
+import "./cart.scss";
 
-import brandLiteIcon from "assets/svgs/brand-icon.svg";
-
-import { Link } from "react-router-dom";
-import { SearchInput } from "components";
-
-const Header = ({ cartHandler }) => {
+const Cart = ({ isCartOpen, showCartHandler }) => {
   return (
-    <header className="app__header">
-      <nav>
-        <Link to="/" className="logo nav__item">
-          <img src={brandFullLogo} alt="" srcset="" />
-        </Link>
-        <SearchInput className="nav__item" />
-        <div className="nav__item">
-          <span>
-            <img src={brandLiteIcon} alt="" />
-          </span>
-          <button
-            type="button"
-            className="cartItem__indicator"
-            onClick={cartHandler}
-          >
+    <div className={`${isCartOpen ? "cart__modal slideIn" : "cart__modal"}`}>
+      <div
+        onClick={showCartHandler}
+        className={`${isCartOpen ? "cart__overlay" : "cart__overlay slideOut"}`}
+      ></div>
+      <div className="cart">
+        <div className="cartHeader">
+          <GoBackLink linkText="Back" />
+          <div className="cartIcon__container">
+            <span>Your Cart</span>
             <svg
               width="24"
               height="24"
@@ -46,12 +37,25 @@ const Header = ({ cartHandler }) => {
                 fill="black"
               />
             </svg>
-            <span className="cartItem__indicator__number">3</span>
-          </button>
+          </div>
         </div>
-      </nav>
-    </header>
+
+        <div className="cartItems">
+          <CartItem />
+
+          <div className="checkoutOnTotal">
+            <div className="subtotal">
+              <span className="subtotalText">Subtotal</span>
+              <span className="subtotalAmount">$58.88</span>
+            </div>
+            <div className="checkoutButton">
+              <LargeCartButton buttonText="Proceed to Checkout" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default Header;
+export default Cart;

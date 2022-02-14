@@ -1,0 +1,105 @@
+@use "sass" as mixin;
+@use "sass" as color;
+
+.bookItem__details {
+  background-color: #fff;
+  max-width: 85vw;
+  width: 90%;
+  margin-inline: auto;
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+
+  //info: image, button, copy availability and price
+  .bookItem__info {
+    padding-inline: 3.75em;
+    display: flex;
+
+    figure {
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+
+      figcaption {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+
+        .availability__copy {
+          font-size: 1.35rem;
+        }
+
+        .book__price {
+          font-size: 4rem;
+          font-weight: 100;
+          margin-top: 0.1em;
+        }
+      }
+    }
+  }
+}
+
+.bookItem__tradeInfo {
+  flex-basis: 20%;
+  padding-bottom: 2em;
+}
+
+/********************************************************************************************************************
+********************************************************************************************************************/
+
+.bookItem__tradeInfo__text {
+  height: 89vh;
+  overflow-y: scroll;
+  flex-basis: 80%;
+  padding-inline: 5em;
+
+  & > section {
+    padding-top: 8.5em;
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5em;
+    }
+
+    .label {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .author,
+    .field {
+      @include mixin.flex-column--g(0.25em);
+    }
+
+    .table-format {
+      display: flex;
+      align-items: flex-start;
+      padding-block: 2em;
+      border-top: 1px solid color.$primary-gray;
+      border-bottom: 1px solid color.$primary-gray;
+
+      & > :not(:first-child) {
+        margin-left: 8em;
+      }
+    }
+  }
+
+  //over flow hidden for scroll
+  .book__foreword {
+    height: 100vh;
+    & > *:not(:first-child) {
+      margin-block: 2em;
+      font-size: 1.4rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.45rem;
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+}

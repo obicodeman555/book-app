@@ -1,9 +1,12 @@
 .home {
   background-color: #fff;
   max-width: 85vw;
-  width: 90%;
+  //height allows any container overflow et to visible on scroll
+  //with the home page
+  height: 100vh;
   margin-inline: auto;
-
+  overflow-y: scroll;
+  overflow-x: hidden;
   //enables header be pertined insidd
   position: relative;
   display: flex;
@@ -14,6 +17,7 @@
   max-width: 94.33%;
   margin-inline: auto;
   position: relative;
-  padding-top: 10em;
-  padding-bottom: 5em;
+  height: max-content;
+  overflow-y: visible;
+  padding-bottom: 4em;
 }

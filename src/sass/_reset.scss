@@ -10,11 +10,21 @@
 
 html {
   font-size: 62.5%; // ==== 10px
+  scroll-behavior: smooth;
 }
+
+// html,
+// body {
+//   overflow: visible;
+// }
 
 body {
   box-sizing: border-box;
   background-color: #000;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 
 ul,
@@ -28,6 +38,12 @@ a {
 
 button {
   cursor: pointer;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 /* clears the ‘X’ from Internet Explorer */
@@ -49,7 +65,46 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-img {
-  width: 100%;
-  max-width: 100%;
+/*removes the incremnt and decrement arrows from an input of number from 
+  Chrome, Safari Edge Opera
+*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* *removes the incremnt and decrement arrows from an input of number from
+  Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*************************************
+Custom scroll bar
+
+********************************************/
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(240, 155, 137);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: rgb(58, 58, 58);
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+  overflow-y: hidden;
 }

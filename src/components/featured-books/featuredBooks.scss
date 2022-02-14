@@ -16,7 +16,7 @@
 
 .container--grid {
   display: grid;
-  grid-auto-columns: minmax(150px, 230px);
+  grid-auto-columns: minmax(200px, 250px);
   grid-auto-rows: auto;
   grid-auto-flow: column;
   gap: 2em;
@@ -34,6 +34,10 @@
   & > a {
     color: #fff;
     font-size: $primary-font-size;
+  }
+
+  &__image {
+    height: 100%;
   }
 }
 
@@ -110,7 +114,7 @@
   @include flex-align-justify-center;
   bottom: 0;
   width: 50px;
-  z-index: 10;
+  z-index: 8;
   cursor: pointer;
   //right positioned
 

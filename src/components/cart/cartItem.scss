@@ -1,0 +1,95 @@
+@use "sass" as color;
+
+.cartItem {
+  display: flex;
+  padding-block-end: 2rem;
+  & > figure {
+    display: flex;
+    flex-basis: 80%;
+
+    img {
+      width: 70px;
+    }
+    //image captions
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1em;
+      padding-top: 0.5em;
+
+      & > span:first-child {
+        font-size: 1.35rem;
+      }
+
+      & > span:last-of-type {
+        font-size: 1.175rem;
+        margin-top: 0.75em;
+      }
+
+      & > button {
+        margin-top: auto;
+        width: 50px;
+        border: 0;
+        padding: 0.35em 0;
+        background-color: transparent;
+
+        //focus
+        &:focus {
+          border: 0.5px solid #000;
+          font-size: 1.135rem;
+        }
+      }
+    }
+  }
+
+  & > div {
+    margin-left: auto;
+  }
+}
+
+//border-bottom, margin to all cart item
+.cartItem {
+  border-bottom: 1px solid #dddd;
+  margin-bottom: 4em;
+}
+
+//input, aount of one item, and amount of more than one item
+.cartItem__control {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  align-items: flex-end;
+
+  & > span:nth-child(2) {
+    display: flex;
+    border: 1px solid color.$primary-gray;
+    margin-top: 0.5em;
+
+    input,
+    button {
+      width: 40px;
+      height: 40px;
+      outline: none;
+    }
+    input {
+      padding-inline: 10px;
+      font-weight: 500;
+      border: 1px solid rgb(216, 216, 216);
+      font-size: 1.5rem;
+    }
+
+    button {
+      border: 1px solid transparent;
+    }
+  }
+
+  .amountOfQuantity,
+  .amountOfItem {
+    font-size: 1.45em;
+  }
+
+  .amountOfQuantity {
+    font-weight: 600;
+    margin-top: auto;
+  }
+}

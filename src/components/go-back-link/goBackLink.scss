@@ -1,0 +1,12 @@
+.homeLink {
+  display: flex;
+  align-items: center;
+  margin-block: 3em;
+
+  &__text {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #000;
+    margin-left: 1em;
+  }
+}

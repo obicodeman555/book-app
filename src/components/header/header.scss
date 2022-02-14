@@ -2,16 +2,15 @@
 @use "sass" as variable;
 @use "sass" as mixin;
 
-header {
+.app__header {
   padding-inline: 5em;
   padding-block: 2.5em;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
+
   //overlayed ontop every element on the home page
-  z-index: 999999;
+  z-index: 9;
   background-color: color.$primary-white;
 }
 
@@ -32,9 +31,13 @@ form {
   position: relative;
 }
 
-.cartItem {
+.cartItem__indicator {
   position: relative;
   @include mixin.flex-align-center;
+  cursor: pointer;
+  border: 0;
+
+  background-color: transparent;
 
   &__number {
     position: absolute;

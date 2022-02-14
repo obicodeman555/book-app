@@ -9,6 +9,9 @@ import Rating from "./rating/Rating";
 import Purchase from "./purchase/Purchase";
 import UserFeedBack from "./user-feed-back/UserFeedBack";
 import AddButtonToCart from "./addcart-button/AddToCartButton";
+import Cart from "./cart/Cart";
+import GoBackLink from "./go-back-link/GoBackLink";
+import LargeCartButton from "./largeCartButton/LargeCartButton";
 
 export {
   Header,
@@ -22,4 +25,7 @@ export {
   Purchase,
   UserFeedBack,
   AddButtonToCart,
+  Cart,
+  GoBackLink,
+  LargeCartButton,
 };

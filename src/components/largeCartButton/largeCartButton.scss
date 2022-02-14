@@ -1,0 +1,22 @@
+.addToCart__buttonLarge {
+  display: flex;
+  align-items: center;
+  padding-inline: 2em;
+  padding-block: 1.15em;
+  margin-top: 2em;
+  font-size: 1.85rem;
+  border: 0;
+  background-color: #000;
+  color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  width: 100%;
+
+  & > span {
+    margin-inline: auto;
+  }
+
+  & > svg > path {
+    fill: #fff;
+  }
+}

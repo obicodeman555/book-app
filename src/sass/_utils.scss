@@ -1,4 +1,5 @@
 @use "./typography" as typography;
+@use "./colors" as color;
 
 .fw-500 {
   font-weight: 500;
@@ -15,11 +16,34 @@
 .sm-font-size {
   font-size: calc(typography.$primary-font-size - 4px);
 }
-
+.md-font-size {
+  font-size: calc(typography.$primary-font-size + 0.35px);
+  font-weight: 600;
+}
+.md-font-size-thin {
+  font-size: calc(typography.$primary-font-size + 0.35px);
+  font-weight: 400;
+}
 .lg-font-size {
   font-size: calc(typography.$primary-font-size + 3px);
 }
 
-.marginleft-sm {
+.margn-left-xsm {
   margin-left: 0.5em;
+}
+
+.margn-left-sm {
+  margin-left: 1rem;
+}
+
+.color-green {
+  color: color.$primary-green;
+}
+
+.mt-md {
+  margin-top: 0.45em;
+}
+
+.mb-md {
+  margin-bottom: 2em;
 }

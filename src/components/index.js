@@ -12,7 +12,7 @@ import AddToCartButton from "./addcart-button/AddToCartButton";
 import Cart from "./cart/Cart";
 import GoBackLink from "./go-back-link/GoBackLink";
 import LargeCartButton from "./largeCartButton/LargeCartButton";
-
+import SearchInputMobile from "./search-input-mobile/SearchInputMobile";
 export {
   Header,
   SearchInput,
@@ -28,4 +28,5 @@ export {
   Cart,
   GoBackLink,
   LargeCartButton,
+  SearchInputMobile,
 };

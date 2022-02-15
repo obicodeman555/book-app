@@ -1,19 +1,25 @@
 @use "sass" as variable;
 @use "sass" as mixin;
 
-.search {
+.search__wrapper {
+  display: flex;
   border: 1px solid #dddddd;
-  width: 50em;
-  @include mixin.flex-align-stretch;
+  flex-grow: 0.2;
+}
+.search {
+  display: flex;
+  height: 40px;
+  width: 100%;
 }
 .search__input {
   outline: none;
   background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.75em 1em;
+  border: 0;
+  padding: 0 2.5em;
   font-weight: 500;
-  flex-basis: 93.33%;
-
+  width: calc(100% - 50px);
+  height: 100%;
+  font-size: 1.45rem;
   //placeholder
   &::placeholder {
     color: #a8a8a8;
@@ -23,16 +29,21 @@
   //on focus
 }
 .search__cta {
-  background-color: lighten(#dddddd, 5%);
+  background-color: lighten(#dddddd5b, 5%);
   outline: none;
-  border: 0;
-  padding: 0.5em;
+  border: 1px solid #dddddd83;
+  height: 100%;
+  width: 50px;
   @include mixin.flex-align-justify-center;
   position: relative;
-  justify-self: end;
-  flex-basis: 10%;
+
   & > img {
     position: absolute;
     display: block;
   }
 }
+
+// .cartIcon__toggler {
+//   border: 1px solid;
+//   margin-left: auto;
+// }

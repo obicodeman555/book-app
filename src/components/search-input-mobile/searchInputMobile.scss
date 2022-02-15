@@ -1,0 +1,26 @@
+.search-input__mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: sticky;
+  z-index: 10;
+  padding-block: 2em;
+  left: 0;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.search-input__mobileWrapper {
+  display: flex;
+  align-items: center;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  margin-right: 3em;
+}

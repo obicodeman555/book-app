@@ -4,7 +4,7 @@ import "./goBackLink.scss";
 
 const GoBackLink = (props) => {
   return (
-    <Link className="homeLink" to="/">
+    <Link className="homeLink" to="/" onClick={props.onClick}>
       <svg
         width="24"
         height="24"

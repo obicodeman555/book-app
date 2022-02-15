@@ -1,0 +1,82 @@
+@use "sass" as color;
+@use "sass" as variable;
+@use "sass" as mixin;
+
+.app__header {
+  @media screen and (min-width: 300px) {
+    padding: 1.48rem 2.08rem;
+  }
+
+  @media screen and (min-width: 900px) {
+    padding: 2.5em 5em;
+  }
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  position: sticky;
+  top: 0;
+
+  //overlayed ontop every element on the home page
+  z-index: 9;
+  background-color: color.$primary-white;
+  width: 100%;
+}
+.logo {
+  & > img {
+    max-width: 200px;
+  }
+}
+
+.navigation__wrapper {
+  display: flex;
+  align-items: center;
+
+  & > *:not(:first-child) {
+    margin-left: auto;
+  }
+}
+
+.nav__item:last-child {
+  @include mixin.flex-align-center;
+  justify-content: space-between;
+}
+
+.cartItem__indicator {
+  position: relative;
+  @include mixin.flex-align-center;
+  cursor: pointer;
+  border: 0;
+  margin-left: clamp(2em, 3em, 4em);
+
+  background-color: transparent;
+
+  &__number {
+    position: absolute;
+    background-color: color.$primary-green;
+    font-family: inherit;
+    color: color.$primary-white;
+    font-size: variable.$primary-font-size;
+    font-weight: 600;
+    top: -0.65em;
+    left: 1em;
+    padding: 0.25em 0.55em;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+}
+
+.searchIcon__showOnMonile {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+
+  @media screen and (min-width: 673px) {
+    display: none;
+  }
+}
+
+#header__search {
+  display: none;
+
+  @media screen and (min-width: 673px) {
+    display: block;
+  }
+}

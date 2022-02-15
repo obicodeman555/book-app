@@ -12,7 +12,7 @@ const Cart = ({ isCartOpen, showCartHandler }) => {
       ></div>
       <div className="cart">
         <div className="cartHeader">
-          <GoBackLink linkText="Back" />
+          <GoBackLink linkText="Back" onClick={showCartHandler} />
           <div className="cartIcon__container">
             <span>Your Cart</span>
             <svg

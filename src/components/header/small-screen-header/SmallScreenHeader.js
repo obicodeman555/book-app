@@ -1,12 +1,12 @@
 import React from "react";
-import "./searchInputMobile.scss";
+import "./smallScreenHeader.scss";
 import { SearchInput } from "components";
 
-const SearchInputMobile = () => {
+const SmallScreenHeader = ({ mobileHeaderHandler }) => {
   return (
     <div className="search-input__mobile">
       <div className="search-input__mobileWrapper">
-        <button type="button" className="arrow">
+        <button type="button" className="arrow" onClick={mobileHeaderHandler}>
           <svg
             width="24"
             height="24"
@@ -28,4 +28,4 @@ const SearchInputMobile = () => {
   );
 };
 
-export default SearchInputMobile;
+export default SmallScreenHeader;

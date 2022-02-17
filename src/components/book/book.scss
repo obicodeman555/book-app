@@ -20,7 +20,7 @@
   & > img {
     width: 100%;
     max-width: 20rem;
-    height: 100%;
+    height: min(25rem, 310px);
   }
 }
 

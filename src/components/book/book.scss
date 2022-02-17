@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 25rem;
+  gap: 2em;
   //hover
   &:hover {
     transition: box-shadow 0.3s cubic-bezier(0.19, -1, 0.22, -1);

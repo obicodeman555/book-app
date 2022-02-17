@@ -8,7 +8,9 @@
     flex-basis: 80%;
 
     img {
-      width: 70px;
+      width: 100%;
+      max-width: 7rem;
+      height: min(10rem, 11rem);
     }
     //image captions
     figcaption {

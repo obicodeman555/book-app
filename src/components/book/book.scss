@@ -2,29 +2,30 @@
 @use "sass" as color;
 
 .book {
-  display: flex;
-
-  & > a {
-    display: flex;
-    align-items: center;
-    gap: 1.25em;
-    color: #000;
-  }
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 25rem;
   //hover
   &:hover {
     transition: box-shadow 0.3s cubic-bezier(0.19, -1, 0.22, -1);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   }
+
+  & > a {
+    display: flex;
+    align-items: stretch;
+  }
 }
 .book__imageContainer {
-  width: 130px;
-  height: calc(100% - 30px);
-  display: inline-flex;
+  & > img {
+    width: 100%;
+    max-width: 20rem;
+    height: 100%;
+  }
 }
 
 .book__detailsContainer {
-  padding-block: 2em;
+  padding: 1em 2em;
 
   .book__title {
     margin-bottom: 0.45em;

@@ -1,0 +1,102 @@
+@use "sass" as typo;
+@use "sass" as mixin;
+@use "sass" as color;
+.featuredBook {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 40px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  & > a {
+    color: #fff;
+    font-size: typo.$primary-font-size;
+  }
+  position: relative;
+}
+.featuredBook,
+.featuredBookLinked > span {
+  display: flex;
+}
+
+.featuredBook__imageBox {
+  //nearest parent to the hover card
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.featuredBook__hoverCard {
+  // padding: 1em;
+  visibility: hidden;
+  position: absolute;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    rgba(34, 34, 34, 0.75) 50px,
+    rgba(5, 5, 5, 1) 250px
+  );
+  padding-inline: 1rem;
+  @include mixin.flex-column;
+  //changing svg colors to white
+  path {
+    fill: #fff;
+  }
+}
+
+//spacing top on all elemnt
+.featuredBook__hoverCard > *:not(:last-child) {
+  margin-top: 1.2em;
+} //show visibile overlay whe hovered
+.featuredBook:hover .featuredBook__hoverCard {
+  transition: all 0.3s;
+  visibility: visible;
+}
+
+//color to show availability
+.isAvailable {
+  color: color.$variant-primary-green;
+  font-weight: 400;
+}
+
+//book item details layout
+
+.featuredBook__item:nth-child(2),
+.featuredBook__item:nth-child(3),
+.featuredBook__item:nth-child(4) {
+  @include mixin.flex-column;
+}
+
+//seprate top spacing
+//flex-container
+
+.featuredBook__item:last-child {
+  svg {
+    width: 20px;
+  }
+
+  span {
+    font-size: 1.15rem;
+  }
+  margin-top: 2em;
+}
+
+.bookTitle {
+  margin-bottom: 0.35em;
+  font-size: calc(100% + 4px);
+}
+
+.publishedYear,
+.bookGenre__category,
+.bookTag__category {
+  font-size: calc(100% - 1px);
+}
+
+.publishedYear,
+.bookGenre__category,
+.bookTag__category,
+.author,
+.publishedYear {
+  margin-top: 0.15em;
+}

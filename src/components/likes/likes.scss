@@ -4,5 +4,9 @@
 .likes {
   @include mixin.flex-column--g(0.15em);
   align-items: center;
-  font-size: calc(typo.$primary-font-size - 1px);
+  font-size: calc(typo.$primary-font-size + 4px);
+
+  & > svg {
+    width: px;
+  }
 }

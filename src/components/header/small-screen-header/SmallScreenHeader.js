@@ -2,9 +2,15 @@ import React from "react";
 import "./smallScreenHeader.scss";
 import { SearchInput } from "components";
 
-const SmallScreenHeader = ({ mobileHeaderHandler }) => {
+const SmallScreenHeader = ({ mobileHeaderHandler, showMobileSearchHeader }) => {
   return (
-    <div className="search-input__mobile">
+    <div
+      className={`${
+        showMobileSearchHeader
+          ? "search-input__mobile slideIn"
+          : "search-input__mobile slideOut"
+      }`}
+    >
       <div className="search-input__mobileWrapper">
         <button type="button" className="arrow" onClick={mobileHeaderHandler}>
           <svg

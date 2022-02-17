@@ -8,6 +8,9 @@
 .fw-600 {
   font-weight: 600;
 }
+.fw-400 {
+  font-weight: 400;
+}
 
 .fw-100 {
   font-weight: 100;
@@ -46,4 +49,9 @@
 
 .mb-md {
   margin-bottom: 2em;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
 }

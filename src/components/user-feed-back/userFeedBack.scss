@@ -1,11 +1,10 @@
 @use "sass" as mixin;
-.user-feedback-info {
+.user-feedback-info,
+.feedback {
   @include mixin.flex-align-center;
 }
 
 .feedback {
-  display: flex;
-  align-items: stretch;
   border-right: 1px solid rgb(84, 84, 84);
   padding-right: 1em;
 }

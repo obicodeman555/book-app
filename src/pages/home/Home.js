@@ -1,7 +1,8 @@
 import "./home.scss";
 import React, { useState } from "react";
-import { Header, FeaturedBooks, Cart } from "components";
+import { Header, FeaturedBook, Cart, Carousel } from "components";
 import { Books } from "pages";
+import {} from "components/index";
 
 const Home = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -22,7 +23,15 @@ const Home = () => {
       <Header cartHandler={showCartHandler} />
       <Cart isCartOpen={isCartOpen} showCartHandler={showCartHandler} />
       <main className="main__container">
-        <FeaturedBooks />
+        <Carousel>
+          <FeaturedBook />
+          <FeaturedBook />
+          <FeaturedBook />
+          <FeaturedBook />
+          <FeaturedBook />
+          <FeaturedBook />
+        </Carousel>
+
         <Books />
       </main>
     </div>

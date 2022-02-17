@@ -11,7 +11,10 @@
     padding: 2.5em 5em;
   }
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-  position: sticky;
+  position: fixed;
+  @media screen and (min-width: 992px) {
+    position: sticky;
+  }
   top: 0;
 
   //overlayed ontop every element on the home page

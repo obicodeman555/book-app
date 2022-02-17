@@ -2,10 +2,10 @@
 @use "sass" as typo;
 
 .ratingInfo {
-  padding-left: 1em;
+  padding-left: 0.65em;
   @include mixin.flex-column--g(0.35em);
   align-items: flex-start;
-  font-size: calc(typo.$primary-font-size - 1px);
+  font-size: calc(typo.$primary-font-size + 4px);
   & > span:first-of-type {
     display: flex;
     gap: 0.35em;

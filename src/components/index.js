@@ -1,6 +1,6 @@
 import Header from "./header/Header";
 import SearchInput from "./search-input/SearchInput";
-import FeaturedBooks from "./featured-books/FeaturedBooks";
+import FeaturedBook from "./featured-book/FeaturedBook";
 import UnderlinedSectionHeaderTitle from "./underlined-section-header/UnderlinedSectionHeaderTitle";
 import Stars from "./star/Stars";
 import Book from "./book/Book";
@@ -12,11 +12,13 @@ import AddToCartButton from "./addcart-button/AddToCartButton";
 import Cart from "./cart/Cart";
 import GoBackLink from "./go-back-link/GoBackLink";
 import LargeCartButton from "./largeCartButton/LargeCartButton";
+import Carousel from "./carousel/Carousel";
+import MobileLargeCartButton from "./mobile-lg-cart-button/MobileLargeCartButton";
 
 export {
   Header,
   SearchInput,
-  FeaturedBooks,
+  FeaturedBook,
   UnderlinedSectionHeaderTitle,
   Stars,
   Book,
@@ -28,4 +30,6 @@ export {
   Cart,
   GoBackLink,
   LargeCartButton,
+  Carousel,
+  MobileLargeCartButton,
 };

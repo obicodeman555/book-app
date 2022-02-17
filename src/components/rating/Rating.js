@@ -6,7 +6,7 @@ const Rating = () => {
   return (
     <div className="ratingInfo">
       <span className="rating">
-        <span className="fw-500">Rating:</span>
+        <span className="fw-600">Ratings:</span>
         <span className="rating__count">4.0</span>
       </span>
       <Stars />

@@ -18,7 +18,7 @@ const Book = ({
     <article className="book">
       <Link to="/books/id">
         <div className="book__imageContainer">
-          <img src={image} alt="" srcset="" />
+          <img src={image} alt="book graphics cover" />
         </div>
         <div className="book__detailsContainer">
           <h2 className="book__title">{bookTitle}</h2>

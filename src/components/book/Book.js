@@ -1,47 +1,59 @@
 import React from "react";
 import "./book.scss";
+import {
+  formatPrice,
+  getAuthors,
+  getReleaseYear,
+  getTags,
+  hasAvailableCopies,
+} from "utils/helpers";
 import { Link } from "react-router-dom";
 
 import { UserFeedBack } from "components";
 import { AddToCartButton } from "components";
 
-const Book = ({
-  image,
-  bookTitle,
-  publisher,
-  category,
-  price,
-  isAvailable,
-  copies,
-}) => {
+const Book = ({ book }) => {
   return (
     <article className="book">
       <Link to="/books/id">
         <div className="book__imageContainer">
-          <img src={image} alt="book graphics cover" />
+          <img src={book.image_url} alt={book.title} />
         </div>
         <div className="book__detailsContainer">
-          <h2 className="book__title">{bookTitle}</h2>
+          <h2 className="book__title">{book.title}</h2>
           <div className="book__author">
-            <span className>{publisher}</span>
-            <span>{category}</span>
+            <span className>
+              <span>{getAuthors(book.authors)}</span>
+              <span>-</span>
+              <span>{getReleaseYear(book.release_date)}</span>
+            </span>
+            <span>{getTags(book.tags)}</span>
           </div>
-          <UserFeedBack />
+          <UserFeedBack
+            likes={book.likes}
+            purchases={book.number_of_purchases}
+          />
           <div className="book__stock">
-            <span className="book__stock__price">{price}</span>
+            <span className="book__stock__price">
+              {formatPrice(book.price)}
+            </span>
             <span
-              className={`${
-                isAvailable && copies !== 0
-                  ? "book__stock__availability available"
-                  : "book__stock__availability unavailable"
+              id={`${
+                hasAvailableCopies(book.available_copies)
+                  ? "available"
+                  : "unavailable"
               }`}
             >
-              {(copies === 0) & !isAvailable
-                ? "Out of stock"
-                : `${copies} Copies Available`}
+              {hasAvailableCopies(book.available_copies)
+                ? `${book.available_copies} Copies Available`
+                : "Out of stock"}
             </span>
           </div>
-          <AddToCartButton />
+          {hasAvailableCopies(book.available_copies) ? (
+            <AddToCartButton />
+          ) : (
+            <div>Cart funtionality disabled</div>
+          )}
         </div>
       </Link>
     </article>

@@ -1,7 +1,33 @@
-// import {gql} from "@apollo/client";
+import { gql } from "@apollo/client";
 
-// export const GET_ALL_BOOKS = gql`
-//     query books($sort: String! $limit: Int!, $start: Int!, publicationState: Int!) {
+export const GET_BOOKS = gql`
+  {
+    books {
+      id
+      title
+      subtitle
+      publisher
+      featured
+      price
+      likes
+      rating
+      currency
+      available_copies
+      full_description
+      number_of_purchases
 
-//     }
-// `
+      image_url
+      release_date
+      authors {
+        name
+      }
+      tags {
+        name
+      }
+
+      genres {
+        name
+      }
+    }
+  }
+`;

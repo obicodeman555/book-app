@@ -3,7 +3,7 @@ import "./header.scss";
 import SearchInputMobile from "./small-screen-header/SmallScreenHeader";
 import LargeScreenHeader from "./large-screen-header/LargeScreenHeader";
 
-const Header = ({ cartHandler }) => {
+const Header = ({ cartHandler, children }) => {
   const [showMobileSearchHeader, setShowMobileSearchHeader] = useState(false);
 
   const mobileHeaderHandler = () => {
@@ -22,6 +22,7 @@ const Header = ({ cartHandler }) => {
           cartHandler={cartHandler}
         />
       )}
+      <div>{children}</div>
     </>
   );
 };

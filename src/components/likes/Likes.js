@@ -17,7 +17,7 @@ const Likes = (props) => {
           fill="black"
         />
       </svg>
-      <span className="likes__number">29</span>
+      <span className="likes__number">{props.likes}</span>
     </div>
   );
 };

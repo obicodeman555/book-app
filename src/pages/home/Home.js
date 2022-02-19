@@ -1,38 +1,32 @@
 import "./home.scss";
-import React, { useState } from "react";
-import { Header, FeaturedBook, Cart, Carousel } from "components";
+import React from "react";
+import { FeaturedBooks, Loading } from "components";
 import { Books } from "pages";
-import {} from "components/index";
+import { useQuery } from "@apollo/client";
+import { GET_BOOKS } from "graphql/queries";
+
+//request
 
 const Home = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-
-  const showCartHandler = () => {
-    setIsCartOpen(!isCartOpen);
-    hideScrollonCartOpen();
-  };
-
-  const hideScrollonCartOpen = () => {
-    !isCartOpen
-      ? document.querySelector(".home").classList.add("scrollbar-hidden")
-      : document.querySelector(".home").classList.remove("scrollbar-hidden");
+  const { loading, data } = useQuery(GET_BOOKS);
+  console.log(loading, data);
+  const getFeaturedBooks = () => {
+    const featuredBooks = data.books.filter((book) => book.featured === true);
+    return featuredBooks;
   };
 
   return (
     <div className="home">
-      <Header cartHandler={showCartHandler} />
-      <Cart isCartOpen={isCartOpen} showCartHandler={showCartHandler} />
       <main className="main__container">
-        <Carousel>
-          <FeaturedBook />
-          <FeaturedBook />
-          <FeaturedBook />
-          <FeaturedBook />
-          <FeaturedBook />
-          <FeaturedBook />
-        </Carousel>
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            <FeaturedBooks books={getFeaturedBooks()} />
 
-        <Books />
+            <Books books={data.books} />
+          </>
+        )}
       </main>
     </div>
   );

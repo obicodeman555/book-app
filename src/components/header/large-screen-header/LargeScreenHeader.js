@@ -45,7 +45,7 @@ const LargeScreenHeader = ({ mobileHeaderHandler, cartHandler }) => {
           conatiner is a flexed item and also a flex container
           */}
           <div className="nav__item cartIcon__toggler">
-            <span>
+            {/* <span>
               <svg
                 width="40"
                 height="40"
@@ -61,7 +61,7 @@ const LargeScreenHeader = ({ mobileHeaderHandler, cartHandler }) => {
                   fill="white"
                 />
               </svg>
-            </span>
+            </span> */}
             {/*
               cart button toggle the cart component on a click event/action
 

@@ -14,6 +14,8 @@ import GoBackLink from "./go-back-link/GoBackLink";
 import LargeCartButton from "./largeCartButton/LargeCartButton";
 import Carousel from "./carousel/Carousel";
 import MobileLargeCartButton from "./mobile-lg-cart-button/MobileLargeCartButton";
+import Loading from "./loading/Loading";
+import FeaturedBooks from "./featured-books/FeaturedBooks";
 
 export {
   Header,
@@ -32,4 +34,6 @@ export {
   LargeCartButton,
   Carousel,
   MobileLargeCartButton,
+  Loading,
+  FeaturedBooks,
 };

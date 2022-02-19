@@ -1,7 +1,7 @@
 import React from "react";
 import "./purchase.scss";
 
-const Purchase = () => {
+const Purchase = ({ purchases }) => {
   return (
     <div className="purchase">
       <svg
@@ -19,7 +19,7 @@ const Purchase = () => {
         />
       </svg>
 
-      <span className="purchase__number">31</span>
+      <span className="numberOfPurchases">{purchases}</span>
     </div>
   );
 };

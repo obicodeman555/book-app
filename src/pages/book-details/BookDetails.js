@@ -1,28 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./bookDetails.scss";
 import {
-  Header,
   UserFeedBack,
   GoBackLink,
   LargeCartButton,
-  Cart,
   MobileLargeCartButton,
 } from "components";
 import bigMagicCover from "assets/img/big-magic-cover_euc3rh.jpg";
 
-const BookDetails = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-
-  const showCartHandler = () => {
-    setIsCartOpen(!isCartOpen);
-
-    console.log(isCartOpen);
-  };
-
+const BookDetails = ({ isCartOpen, showCartHandler }) => {
   return (
     <div className="bookItem__details">
-      <Header cartHandler={showCartHandler} />
-      <Cart isCartOpen={isCartOpen} showCartHandler={showCartHandler} />
+      {/* <Header cartHandler={showCartHandler} /> */}
+      {/* <Cart isCartOpen={isCartOpen} showCartHandler={showCartHandler} /> */}
       <article className="bookItem__info">
         <section className="bookItem__tradeInfo">
           <div className="">

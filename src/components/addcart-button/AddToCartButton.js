@@ -1,7 +1,7 @@
 import React from "react";
 import "./addToCartButton.scss";
 import { cartHiddenVar } from "graphql/cache";
-import { cartItemsVar } from "graphql/cache";
+// import { cartItemsVar } from "graphql/cache";
 import { hasAvailableCopies } from "utils/helpers";
 
 const AddToCartButton = ({ availableCopies }) => {

@@ -5,8 +5,10 @@
   justify-content: flex-start;
   position: absolute;
   z-index: 5;
+  left: 15.55rem;
+
   @media (min-width: 1024px) {
-    left: calc(100% - 31.855rem);
+    left: 152px;
   }
 
   bottom: -0.55rem;

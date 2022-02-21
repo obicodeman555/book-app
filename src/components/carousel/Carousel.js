@@ -9,12 +9,14 @@ const Carousel = (props) => {
   const prevSlideHandler = () => {
     let newPosition = sliderPosition;
 
-    if (newPosition <= 0) {
+    if (newPosition >= 0) {
       newPosition = newPosition - 1;
     }
 
     translateFullSlides(newPosition);
     setSliderPosition(newPosition);
+
+    console.log(newPosition);
   };
   const nextSlideHandler = () => {
     let newPosition = sliderPosition;
@@ -24,6 +26,8 @@ const Carousel = (props) => {
     }
     translateFullSlides(newPosition);
     setSliderPosition(newPosition);
+
+    console.log(newPosition);
   };
 
   const translateFullSlides = (newPosition) => {

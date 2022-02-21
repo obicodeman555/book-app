@@ -9,7 +9,7 @@ import { GET_BOOKS } from "graphql/queries";
 
 const Home = () => {
   const { loading, data } = useQuery(GET_BOOKS);
-  console.log(loading, data);
+
   const getFeaturedBooks = () => {
     const featuredBooks = data.books.filter((book) => book.featured === true);
     return featuredBooks;

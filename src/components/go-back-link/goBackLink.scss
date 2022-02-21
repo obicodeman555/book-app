@@ -1,7 +1,8 @@
 .homeLink {
   display: flex;
   align-items: center;
-  margin-block: 3em;
+  margin: 3em 0;
+  cursor: pointer;
 
   &__text {
     font-size: 1.35rem;

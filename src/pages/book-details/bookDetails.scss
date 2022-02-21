@@ -108,20 +108,11 @@
   }
 
   //over flow hidden for scroll
-  .book__foreword {
+  .book__description {
+    font-size: 1.65rem;
     @media screen and (min-width: 800px) {
       height: 100vh;
     }
-    & > *:not(:first-child) {
-      margin-block: 2em;
-      font-size: 1.4rem;
-    }
-  }
-
-  h3 {
-    font-size: 1.65rem;
-    margin-top: 3em;
-    margin-bottom: 2em;
   }
 
   .genreAndTags,

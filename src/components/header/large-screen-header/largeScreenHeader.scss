@@ -42,7 +42,7 @@
   justify-content: space-between;
 }
 
-.cartItem__indicator {
+.cartToggle__icon {
   position: relative;
   @include mixin.flex-align-center;
   cursor: pointer;
@@ -50,22 +50,20 @@
   margin-left: clamp(2em, 3em, 4em);
 
   background-color: transparent;
-
-  &__number {
-    position: absolute;
-    background-color: color.$primary-green;
-    font-family: inherit;
-    color: color.$primary-white;
-    font-size: variable.$primary-font-size;
-    font-weight: 600;
-    top: -0.65em;
-    left: 1em;
-    padding: 0.25em 0.55em;
-    border-radius: 50%;
-    vertical-align: middle;
-  }
 }
-
+.numberOfCartItems {
+  position: absolute;
+  background-color: color.$primary-green;
+  font-family: inherit;
+  color: color.$primary-white;
+  font-size: variable.$primary-font-size;
+  font-weight: 600;
+  top: -0.65em;
+  left: 1em;
+  padding: 0.25em 0.55em;
+  border-radius: 50%;
+  vertical-align: middle;
+}
 .searchIcon__showOnMonile {
   align-items: center;
   background-color: transparent;

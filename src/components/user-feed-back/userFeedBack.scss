@@ -1,7 +1,10 @@
 @use "sass" as mixin;
+@use "sass" as typo;
+
 .user-feedback-info,
 .feedback {
   @include mixin.flex-align-center;
+  font-size: calc(typo.$primary-font-size + 3px);
 }
 
 .feedback {

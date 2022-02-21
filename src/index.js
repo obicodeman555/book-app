@@ -4,10 +4,13 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+// import { resolvers } from "graphql/resolver";
+
+const cache = new InMemoryCache({});
 
 const client = new ApolloClient({
   uri: "https://quidax-feec-graphql.herokuapp.com/graphql",
-  cache: new InMemoryCache(),
+  cache: cache,
 });
 
 ReactDOM.render(

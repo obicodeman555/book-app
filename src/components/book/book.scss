@@ -3,14 +3,15 @@
 
 .book {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: 25rem;
-  gap: 2em;
+  grid-template-columns: repeat(auto-fit, 550px);
+  grid-template-rows: auto;
+  gap: 6rem;
   //hover
   &:hover {
     transition: box-shadow 0.3s cubic-bezier(0.19, -1, 0.22, -1);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   }
+  position: relative;
 
   & > a {
     display: flex;
@@ -19,9 +20,9 @@
 }
 .book__imageContainer {
   & > img {
-    width: 100%;
+    width: 18rem;
     max-width: 20rem;
-    height: min(25rem, 310px);
+    height: min(28rem, 310px);
   }
 }
 

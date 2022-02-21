@@ -6,7 +6,7 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   & > a {
     color: #fff;
-    font-size: typo.$primary-font-size;
+    font-size: calc(typo.$primary-font-size + 3px);
   }
   position: relative;
 }
@@ -22,6 +22,10 @@
   left: 0;
   right: 0;
   bottom: 0;
+
+  & > img {
+    width: 100%;
+  }
 }
 
 .featuredBook__hoverCard {

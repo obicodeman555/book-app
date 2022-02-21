@@ -9,13 +9,12 @@ import {
 } from "utils/helpers";
 import { Link } from "react-router-dom";
 
-import { UserFeedBack } from "components";
-import { AddToCartButton } from "components";
+import { UserFeedBack, AddToCartButton } from "components";
 
 const Book = ({ book }) => {
   return (
     <article className="book">
-      <Link to="/books/id">
+      <Link to={`/books/${book.id}`}>
         <div className="book__imageContainer">
           <img src={book.image_url} alt={book.title} />
         </div>
@@ -32,6 +31,7 @@ const Book = ({ book }) => {
           <UserFeedBack
             likes={book.likes}
             purchases={book.number_of_purchases}
+            rating={book.rating}
           />
           <div className="book__stock">
             <span className="book__stock__price">
@@ -49,13 +49,13 @@ const Book = ({ book }) => {
                 : "Out of stock"}
             </span>
           </div>
-          {hasAvailableCopies(book.available_copies) ? (
-            <AddToCartButton />
-          ) : (
-            <div>Cart funtionality disabled</div>
-          )}
         </div>
       </Link>
+
+      <AddToCartButton
+        bookId={book.id}
+        availableCopies={book.available_copies}
+      />
     </article>
   );
 };

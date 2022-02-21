@@ -20,7 +20,7 @@ const CartItem = () => {
       <div className="cartItem__control">
         <span className="amountOfItem">$29.99</span>
         <span>
-          <button type="button">
+          <button type="button" className="incrementButton">
             <svg
               width="24"
               height="24"
@@ -37,7 +37,7 @@ const CartItem = () => {
             disabled="disabled"
             value={2}
           />
-          <button type="button">
+          <button type="button" className="decrementButton">
             <svg
               width="24"
               height="24"

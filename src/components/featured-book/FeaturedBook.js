@@ -13,7 +13,7 @@ import { UserFeedBack } from "components";
 
 const FeaturedBook = ({ book }) => {
   return (
-    <Link to="/books/id" className="featuredBookLinked">
+    <Link to={`/books/${book.id}`} className="featuredBookLinked">
       <span className="featuredBook__imageBox">
         <img
           className="featuredBook__image"
@@ -29,7 +29,7 @@ const FeaturedBook = ({ book }) => {
             <span className="bookTitle fw-600">{book.title}</span>
             <span className="author fw-600">{getAuthors(book.authors)}</span>
             <span className="publishedYear fw-100">
-              {getReleaseYear(book.realease_date)}
+              {getReleaseYear(book.release_date)}
             </span>
           </span>
           <span className="featuredBook__item">
@@ -46,6 +46,7 @@ const FeaturedBook = ({ book }) => {
             className="featuredBook__item"
             likes={book.likes}
             purchases={book.number_of_purchases}
+            rating={book.rating}
           />
         </span>
       </span>

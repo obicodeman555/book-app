@@ -11,7 +11,7 @@ const UserFeedBack = (props) => {
         <Likes className="margn-left-sm" likes={props.likes} />
       </div>
 
-      <Rating />
+      <Rating rating={props.rating} />
     </div>
   );
 };

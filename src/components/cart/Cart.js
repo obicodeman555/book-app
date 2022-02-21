@@ -1,18 +1,27 @@
 import React from "react";
 import CartItem from "./CartItem";
 import { GoBackLink, LargeCartButton } from "components";
+
 import "./cart.scss";
 
-const Cart = ({ isCartOpen, showCartHandler }) => {
+import { useReactiveVar } from "@apollo/client";
+import { cartHiddenVar } from "graphql/cache";
+
+const Cart = () => {
+  const cartHidden = useReactiveVar(cartHiddenVar);
+
   return (
-    <div className={`${isCartOpen ? "cart__modal slideIn" : "cart__modal"}`}>
+    <div className={`${cartHidden ? "cart__modal" : "cart__modal slideIn"}`}>
       <div
-        onClick={showCartHandler}
-        className={`${isCartOpen ? "cart__overlay" : "cart__overlay slideOut"}`}
+        className={`${cartHidden ? "cart__modal slideIn" : "cart__overlay"}`}
       ></div>
       <div className="cart">
         <div className="cartHeader">
-          <GoBackLink linkText="Back" onClick={showCartHandler} />
+          <GoBackLink
+            buttonText="Back"
+            onClick={() => cartHiddenVar(!cartHiddenVar())}
+            useAsButton={true}
+          />
           <div className="cartIcon__container">
             <span>Your Cart</span>
             <svg

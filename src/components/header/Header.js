@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./header.scss";
 import SearchInputMobile from "./small-screen-header/SmallScreenHeader";
 import LargeScreenHeader from "./large-screen-header/LargeScreenHeader";
+// import { GET_CART_HIDDEN } from "graphql/queries";
+// import { useQuery } from "@apollo/client";
 
-const Header = ({ cartHandler, children }) => {
+const Header = ({ children }) => {
   const [showMobileSearchHeader, setShowMobileSearchHeader] = useState(false);
 
   const mobileHeaderHandler = () => {
@@ -17,10 +19,7 @@ const Header = ({ cartHandler, children }) => {
           showMobileSearchHeader={showMobileSearchHeader}
         />
       ) : (
-        <LargeScreenHeader
-          mobileHeaderHandler={mobileHeaderHandler}
-          cartHandler={cartHandler}
-        />
+        <LargeScreenHeader mobileHeaderHandler={mobileHeaderHandler} />
       )}
       <div>{children}</div>
     </>

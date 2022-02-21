@@ -10,8 +10,8 @@ const AddToCartButton = ({ availableCopies }) => {
       {hasAvailableCopies(availableCopies) ? (
         <button type="button" onClick={() => cartHiddenVar(!cartHiddenVar())}>
           <svg
-            width="24"
-            height="24"
+            width="20"
+            height="22"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -31,10 +31,12 @@ const AddToCartButton = ({ availableCopies }) => {
               fill="black"
             />
           </svg>
-          <span className="fw-600">Add to Cart</span>
+          <span className="fw-600 font-size-2">Add to Cart</span>
         </button>
       ) : (
-        <div>Cart funtionality disabled</div>
+        <div className="font-size-2 color-disabled">
+          Cart funtionality disabled
+        </div>
       )}
     </div>
   );

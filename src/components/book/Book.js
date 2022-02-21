@@ -20,8 +20,8 @@ const Book = ({ book }) => {
         </div>
         <div className="book__detailsContainer">
           <h2 className="book__title">{book.title}</h2>
-          <div className="book__author">
-            <span className>
+          <div className="book__author font-size-1">
+            <span>
               <span>{getAuthors(book.authors)}</span>
               <span>-</span>
               <span>{getReleaseYear(book.release_date)}</span>
@@ -33,7 +33,7 @@ const Book = ({ book }) => {
             purchases={book.number_of_purchases}
             rating={book.rating}
           />
-          <div className="book__stock">
+          <div className="book__stock font-size-1">
             <span className="book__stock__price">
               {formatPrice(book.price)}
             </span>

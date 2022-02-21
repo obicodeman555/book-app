@@ -17,20 +17,31 @@
 }
 
 .sm-font-size {
-  font-size: calc(typography.$primary-font-size - 4px);
+  font-size: calc(typography.$primary-font-size - 0.25rem);
 }
 .md-font-size {
-  font-size: calc(typography.$primary-font-size + 0.35px);
+  font-size: calc(typography.$primary-font-size + 0.55rem);
   font-weight: 600;
 }
 .md-font-size-thin {
-  font-size: calc(typography.$primary-font-size + 0.35px);
+  font-size: calc(typography.$primary-font-size + 0.55rem);
   font-weight: 400;
 }
 .lg-font-size {
-  font-size: calc(typography.$primary-font-size + 3px);
+  font-size: calc(typography.$primary-font-size + 55rem);
 }
 
+.font-size-1 {
+  font-size: 12px;
+}
+
+.font-size-2 {
+  font-size: 14px;
+}
+
+.font-size-3 {
+  font-size: 16px;
+}
 .margn-left-xsm {
   margin-left: 0.5em;
 }
@@ -41,6 +52,10 @@
 
 .color-green {
   color: color.$primary-green;
+}
+
+.color-disabled {
+  color: rgb(160, 160, 160);
 }
 
 .mt-md {

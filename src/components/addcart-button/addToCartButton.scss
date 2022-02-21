@@ -5,9 +5,11 @@
   justify-content: flex-start;
   position: absolute;
   z-index: 5;
-  right: 10%;
-  left: 34.35%;
-  bottom: 0;
+  @media (min-width: 1024px) {
+    left: calc(100% - 31.855rem);
+  }
+
+  bottom: -0.55rem;
 
   padding: 0.85rem 0;
   & > button {

@@ -9,7 +9,7 @@ const Carousel = (props) => {
   const prevSlideHandler = () => {
     let newPosition = sliderPosition;
 
-    if (newPosition >= 0) {
+    if (newPosition >= 0 || newPosition < 0) {
       newPosition = newPosition - 1;
     }
 
